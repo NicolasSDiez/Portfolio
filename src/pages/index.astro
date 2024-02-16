@@ -2,16 +2,26 @@
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import LinkedinIcon from "../components/Icons/LinkedinIcon.astro";
-import Githubicon from "../components/Icons/GithubIcon.astro"
+import Githubicon from "../components/Icons/GithubIcon.astro";
 import SocialPills from "../components/SocialPills.astro";
 import EmailIcon from "../components/Icons/EmailIcon.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../components/Icons/BriefCase.astro";
+import CodeIcon from "../components/Icons/CodeIcon.astro"
+import Projects from "../components/Projects.astro"
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
+<Layout title="Portfolio - Nicolás Diez - Desarrollador y Programador Web.">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-36">
+			<img
+				class="rounded-full size-12"
+				src="https://yt3.googleusercontent.com/-HYnsiz-ipaoNvJ4PAclFsZmi4ZIYwlqZMEuCdYavQE0OkmEtdoYeuKEUs7_zV4te8xqP-ldZ1E=s900-c-k-c0x00ffffff-no-rj"
+				alt="foto"
+			/>
 			<h1
-				class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-10"
+				class="text-white text-3xl md:text-4xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
 			>
 				¡Hola! Soy Nicolás Diez. <a
 					href="https://www.linkedin.com/in/nicolas-diez-8421a3282/"
@@ -22,22 +32,39 @@ import EmailIcon from "../components/Icons/EmailIcon.astro";
 					<Badge>Disponible para trabajar</Badge>
 				</a>
 			</h1>
-			<h2 class="text-white text-2xl opacity-80">
+			<h2 class="text-white text-xl lg:text-2xl text-wrap max-w-[700px] opacity-80">
 				<span class="text-yellow-100/90"> Desarrollador Web.</span>
 				<span class="text-red-200/90">Desde Córdoba Argentina,</span>
 				<span class="opacity-80"> creando aplicaciones únicas.</span>
 			</h2>
-			<nav class="flex gap-x-4 mt-4">
-				<SocialPills href="https://www.linkedin.com/in/nicolas-diez-8421a3282/">
-					<LinkedinIcon class="w-6 h-6" />Linkedin
+			<nav class="flex gap-4 flex-wrap mt-4">
+				<SocialPills
+					href="https://www.linkedin.com/in/nicolas-diez-8421a3282/"
+				>
+					<LinkedinIcon class="size-4 md:size-6" />Linkedin
 				</SocialPills>
-				<SocialPills  href="https://github.com/NicolasSDiez">
-					<Githubicon class="w-6 h-6" />GitHub
+				<SocialPills href="https://github.com/NicolasSDiez">
+					<Githubicon class="size-4 md:size-6" />GitHub
 				</SocialPills>
-				<SocialPills  href="mailto:nicolas.diez1s@gmail.com">
-					<EmailIcon class="w-6 h-6" />nicolas.diez1s@gmail.com
+				<SocialPills href="mailto:nicolas.diez1s@gmail.com">
+					<EmailIcon class="size-4 md:size-6" />nicolas.diez1s@gmail.com
 				</SocialPills>
 			</nav>
-		</section>
+		</SectionContainer>
+		<SectionContainer id="experience">
+			<h2 class="font-semibold text-3xl mb-4 flex gap-x-2 items-center">
+				<BriefCase class="size-7" />
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="font-semibold text-3xl mb-4 flex gap-x-2 items-center">
+				<CodeIcon class="size-8" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
 	</main>
 </Layout>
