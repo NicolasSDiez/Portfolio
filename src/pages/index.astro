@@ -10,11 +10,12 @@ import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/Icons/BriefCase.astro";
 import CodeIcon from "../components/Icons/CodeIcon.astro"
 import Projects from "../components/Projects.astro"
+import BookIcon from "../components/Icons/BookIcon.astro"
 ---
 
 <Layout title="Portfolio - Nicolás Diez - Desarrollador y Programador Web.">
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-36">
+		<SectionContainer id="contact" class="py-36 lg:py-24 md:py-12 sm:py-6 pb-36">
 			<img
 				class="rounded-full size-12"
 				src="profile-pic 2.png"
@@ -23,11 +24,11 @@ import Projects from "../components/Projects.astro"
 			<h1
 				class="text-white text-3xl md:text-4xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
 			>
-				¡Hola! hola Soy Nicolás Diez. <a
+				¡Hola! Soy Nicolás Diez. <a
 					href="https://www.linkedin.com/in/nicolas-diez-8421a3282/"
 					target="_blank"
 					rel="noopener"
-					class="flex justify-end items-center pb-1 hover:scale-110 transition"
+					class="flex justify-center items-center pb-1 text-center hover:scale-110 transition"
 				>
 					<Badge>Disponible para trabajar</Badge>
 				</a>
@@ -51,20 +52,30 @@ import Projects from "../components/Projects.astro"
 				</SocialPills>
 			</nav>
 		</SectionContainer>
+		
+		<SectionContainer id="project">
+			<h2 class="font-semibold text-3xl mb-4 flex gap-x-2 items-center text-white">
+				<CodeIcon class="size-8" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+
 		<SectionContainer id="experience">
-			<h2 class="font-semibold text-3xl mb-4 flex gap-x-2 items-center">
+			<h2 class="font-semibold text-3xl mb-4 flex gap-x-2 items-center text-white">
 				<BriefCase class="size-7" />
 				Experiencia laboral
 			</h2>
 			<Experience />
 		</SectionContainer>
-
-		<SectionContainer id="project">
-			<h2 class="font-semibold text-3xl mb-4 flex gap-x-2 items-center">
-				<CodeIcon class="size-8" />
-				Proyectos
+		
+		<SectionContainer id="about">
+			<h2 class="font-semibold text-3xl mb-4 flex gap-x-2 items-center text-white">
+				<BookIcon class="size-8" />
+				Sobre mí
 			</h2>
-			<Projects />
+			<h3 class="text-pretty text-white/90">Soy un apasionado de la tecnología y de la música. Indago y reflexiono sobre ambos mundos y me mantengo en constante crecimiento. He realizado una Tecnicatura en Electrónica y estoy terminando una Licenciatura en Composición Musical. Mi camino me llevó al mundo de la programación donde descubrí un inmenso mundo creativo y desafiante, me interesa investigar cuales son las posibilidades de encuentro entre ambos campos. Sin dudas hay mucho aún por descubrir y crear. Si te interesa conocerme más contacta conmigo, será un placer hablar contigo. </h3>
+			
 		</SectionContainer>
 	</main>
 </Layout>

@@ -7,7 +7,34 @@ const PROJECTS = [
         link: "https://drewili.com.pe/",
         github: "https://github.com/drewilipf/drewili-pf",
         image: "/973shots_so.webp",
-        tags: ["Stripe", "Tailwind-css", "JavaScript", "Toolkit"],
+        tags: ["Stripe", "Tailwind-css", "JavaScript", "Toolkit", "Express", "Render", "Vercel"],
+    },
+    {
+        title: "Dogs API",
+        description:
+            "Es una app sobre perros, el usuario puede navegar, crear, editar, ordenar, borrar y consultar distintas razas. Realizando consultas a una API y también almacenando los datos creados en una BDD propia.",
+        link: "#",
+        github: "https://github.com/NicolasSDiez/PI-Dogs",
+        image: "/DogsApi.webp",
+        tags: ["React - Vite", "CSS", "HTML5", "JavaScript", "PostgreSQL", "Sequelize"],
+    },
+    {
+        title: "Portfolio - Astro",
+        description:
+            "Es mi primer portfolio, a su vez me doy la oportunidad de probar un framework nuevo llamado Astro, que está pensado para generar Apps frontend rápidas y eficientes. Presenta una nueva arquitectura fronted que agiliza la producción y trabaja con el concepto de islas",
+        link: "https://eclectic-kringle-31a779.netlify.app/",
+        github: "https://github.com/NicolasSDiez/Portfolio",
+        image: "/portfolioAstro.webp",
+        tags: ["Astro", "Tailwind-CSS", "JavaScript", "Netlify"],
+    },
+    {
+        title: "Rick and Morty",
+        description:
+            "Es el primer proyecto web realizado de manera Full Stack, similar al proyecto de DOGs, realiza consultas en una API y muestra, filtra y ordena información sobre personajes de Rick and Morty, con la opción de crear nuevos personajes y guardarlos en una BDD propia.",
+        link: "#",
+        github: "#",
+        image: "/RickMorty.webp",
+        tags: ["HTML", "CSS", "JavaScript", "GitHub", "NodeJS", "Express", "PostgreSQL", "React"],
     },
 ];
 ---
@@ -15,14 +42,12 @@ const PROJECTS = [
 {
     PROJECTS.map(({ title, description, tags, image }) => (
         <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2 mt-10">{title}</h3>
+            <p class="text-lg mb-4 text-pretty text-white">{description}</p>
             <ul>
                 {tags.map((tag) => (
-                    <li>
-                        <span class={tag}>
-                        {tag}
-                        </span>
+                    <li class="inline-block mr-2 text-violet-500/90">
+                        <span class={tag}>{tag}</span>
                     </li>
                 ))}
             </ul>
